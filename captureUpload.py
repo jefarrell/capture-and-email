@@ -2,11 +2,12 @@ from subprocess import call
 import time
 import smtplib
 import pyscreenshot as ImageGrab
+import assets
 
 
 ####  GMAIL SMTP LOGIN  ####
-GMAIL_USERNAME = "cybernetiquethesis@gmail.com"
-GMAIL_PWD = "thesis666"
+GMAIL_USERNAME = assets.user
+GMAIL_PWD = assets.pwd
 recipients = "jf2813@nyu.edu"
 email_subject = "testing"
 body_of_email = "did the body work?"
@@ -19,15 +20,14 @@ session.login(GMAIL_USERNAME, GMAIL_PWD)
 
 ####  TAKE SCREENSHOTS  ####
 def screenshot():
-	for i in range(10):
+	for i in range(1):
 		print(i)
-		call(['screencapture','-x','test',str(i),'.png'])
+		#call(['screencapture','-x','test',str(i),'.png'])
 		#ImageGrab.grab_to_file('img'+str(i)+'.png')
 		time.sleep(5)
 
-while True:
-	screenshot()
-
+# while True:
+# 	screenshot()
 
 ####  COMPILE AND SEND EMAIL  ####
 headers = "\r\n".join(["from: " + GMAIL_USERNAME,
@@ -37,4 +37,4 @@ headers = "\r\n".join(["from: " + GMAIL_USERNAME,
 	"content-type: text/html"])
 
 content = headers + "\r\n\r\n" + body_of_email
-#session.sendmail(GMAIL_USERNAME, recipients, content)
+session.sendmail(GMAIL_USERNAME, recipients, content)
