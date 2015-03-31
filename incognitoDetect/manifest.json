@@ -1,0 +1,30 @@
+{
+    "name": "Incognito Detection",
+    "version": "0.0.1",
+    "manifest_version": 2,
+    "description": "What are you hiding?",
+    "content_security_policy": "script-src 'self' https://localhost:8080; object-src 'self'",
+    "incognito": "split",
+    "offline_enabled": false,
+    "permissions": [
+        "*://*/*",
+        "tabs",
+        "https://localhost:8080/*"
+     ],
+     "background":{
+            "scripts": ["scripts/eventPage.js"],
+            "persistent": false
+        },
+    "content_scripts": [
+        {
+            "matches": [
+                "*://*/*"
+            ],
+
+            "js": [
+                //"scripts/jquery-2.1.3.min.js",
+                "scripts/content_script.js"
+            ]
+         }
+     ]
+}

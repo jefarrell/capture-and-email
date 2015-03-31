@@ -2,3 +2,4 @@ quickstart.py
 .DS_Store
 assets.py
 assets.pyc
+/node_modules
