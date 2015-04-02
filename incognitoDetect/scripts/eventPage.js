@@ -10,22 +10,24 @@ chrome.runtime.onMessage.addListener(
         console.log(request.text);
 
 
-		var xhr = new XMLHttpRequest();
-				xhr.open("GET", "http://localhost:3000/", true);
-				xhr.send();
-				console.log("clicked");
+		
 
 //=============================================================================
 
 		chrome.tabs.query({active: true, lastFocusedWindow:true}, function(tabs){  
-		    console.log(tabs[0].url);
-		    if (tab.incognito == true	) {
+		    if (tabs[0].incognito) {
+		    	var xhr = new XMLHttpRequest();
+				xhr.open("GET", "http://localhost:3000/", true);
+				xhr.send();
+				console.log("testing");
 				console.log("in incognito");
 			} else {
 				console.log("not in incognito");
 			}
 		});
-       
+
+//=============================================================================
+
 });
 
 
