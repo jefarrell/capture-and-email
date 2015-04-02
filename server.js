@@ -11,7 +11,7 @@ console.log('Server listening at port:', port)
 
 function listen() {
 	app.get('/', function (req, res) {
-		console.log("Got request");
+		console.log("Got a request");
 		res.end();
 		
 	})		
