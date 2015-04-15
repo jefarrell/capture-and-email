@@ -1,4 +1,4 @@
-
+var pythonShell = require('python-shell');
 var express = require('express')
 var app = express()
 
@@ -13,8 +13,12 @@ function listen() {
 	app.get('/', function (req, res) {
 		console.log("Got a request");
 		res.end();
-		
-	})		
+
+		pythonShell.run('captureUpload.py', function(err) {
+			if (err) throw err;
+			console.log('finished');
+		});
+	});		
 }
 
 listen();

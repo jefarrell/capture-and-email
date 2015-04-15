@@ -3,3 +3,6 @@ quickstart.py
 assets.py
 assets.pyc
 /node_modules
+*.png
+*.mp4
+mailtest.py

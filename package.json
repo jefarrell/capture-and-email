@@ -1,12 +1,12 @@
 {
-  "name": "adHover",
+  "name": "Captuer & Upload",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
   "dependencies": {
     "express": "^4.11.2",
     "fs": "^0.0.2",
-    "serialport": "^1.6.1"
+    "python-shell": "0.0.3"
   },
   "devDependencies": {},
   "scripts": {
