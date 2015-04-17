@@ -1,3 +1,4 @@
+#! /usr/bin/env python
 import smtplib, os, email, re, sys, glob, string, time, datetime
 from subprocess import call
 import subprocess as sp
@@ -41,33 +42,6 @@ def screenshot():
 
 screenshot()
 
-
-
-####  GMAIL WORKING  ####
-# GMAIL_USERNAME = assets.user
-# GMAIL_PWD = assets.pwd
-# recipients = assets.recipients
-# email_subject = "test"
-# body_of_email = "working"
-
-# session = smtplib.SMTP('smtp.gmail.com', 587)
-# session.ehlo()
-# session.starttls()
-# session.login(GMAIL_USERNAME, GMAIL_PWD)
-# print("logged in")
-
-# ####  COMPILE AND SEND EMAIL  ####
-# headers = "\r\n".join(["from: " + GMAIL_USERNAME,
-# 	"subject: " + email_subject,
-# 	"to : " + recipients,
-# 	"attachments: " + '/out.mp4',
-# 	"mime-version: 1.0",
-# 	"content-type: text/html"])
-
-# content = headers + "\r\n\r\n" + body_of_email
-# print("compiled")
-# session.sendmail(GMAIL_USERNAME, recipients, content)
-# print("sent")
 
 
 
@@ -129,23 +103,5 @@ except:
 
 
 
-
-
-
-
-# ####  TAKE SCREENSHOTS  ####
-# def screenshot():
-# 	for i in range(3):
-# 		file = 'test'+str(i)+'.png'
-# 		print(i)
-# 		#call(['screencapture','-x','test',str(i),'.png'])
-# 		#ImageGrab.grab_to_file('img'+str(i)+'.png')
-# 		# im = ImageGrab.grab()
-# 		# im.save('img'+str(i)+'.png',format=None)
-# 		#os.system("screencapture -t png " + file)
-# 		time.sleep(5)
-
-# while True:
-# 	screenshot()
 
 
