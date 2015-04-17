@@ -1,0 +1,15 @@
+///////////////////////////////////////////////////
+///---DOC READY---/////////////////////////////////
+///////////////////////////////////////////////////
+ 	
+console.log("page loaded");
+
+
+function sendit() {
+	chrome.runtime.sendMessage({text:"new page"});
+}
+
+/////  When a new page loads,  /////
+/////  Send a message to the Event Page /////
+window.onload = sendit();
+
